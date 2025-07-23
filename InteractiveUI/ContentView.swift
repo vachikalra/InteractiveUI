@@ -14,18 +14,19 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("What is your name?")
+            Text(TextTitle)
                 .font(.largeTitle)
             TextField("Type your name here...", text:$name)
                 .multilineTextAlignment(.center)
                     .font(.title)
                     .border(Color.gray, width: 1)
             Button("Submit Name") {
-                print(name)
+                print("Welcome, \(name)!")
             }
                 .font(.title2)
                 .buttonStyle(.borderedProminent)
                 .tint(.pink)
+            
             
         }
         .padding()
